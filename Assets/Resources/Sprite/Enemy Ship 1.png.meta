@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 1e00a3d1ba210a9409093f6876221cfc
+guid: ea8c70f898220e3429b7f8e86e086cc8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6950796986575593632
-    second: Player Ship_0
+      213: 6788304237874826027
+    second: Enemy Ship 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 700
+  spritePixelsToUnits: 900
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Player Ship_0
+      name: Enemy Ship 1_0
       rect:
         serializedVersion: 2
-        x: 149
-        y: 99
-        width: 902
-        height: 1002
+        x: 99
+        y: 49
+        width: 1002
+        height: 1052
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 06f5e45b7fec98f90800000000000000
-      internalID: -6950796986575593632
+      spriteID: b2bcec50db6e43e50800000000000000
+      internalID: 6788304237874826027
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Player Ship_0: -6950796986575593632
+      Enemy Ship 1_0: 6788304237874826027
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
