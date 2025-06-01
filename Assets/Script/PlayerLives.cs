@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -21,7 +22,7 @@ public class PlayerLives : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-            if (collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Enemy Projectile")
         {
             Destroy(collision.gameObject);
 
@@ -38,12 +39,38 @@ public class PlayerLives : MonoBehaviour
                 }
             }
             if (lives <= 0)
+            {
+                Destroy(gameObject);
+            }
+        }
+
+    }
+    /*
+    void OnTrigggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy Projectile")
+        {
+            Destroy(collision.gameObject);
+
+            lives -= 1;
+            for (int i = 0; i < livesUI.Length; i++)
+            {
+                if (i < lives)
                 {
-                    Destroy(gameObject);
+                    livesUI[i].enabled = true;
                 }
+                else
+                {
+                    livesUI[i].enabled = false;
+                }
+            }
+            if (lives <= 0)
+            {
+                Destroy(gameObject);
+            }
         }
     }
-
+    */
     /*
     void OnCollisionEnter2D(Collision2D collision)
     {
