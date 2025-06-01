@@ -930,7 +930,7 @@ GameObject:
   - component: {fileID: 881756279}
   m_Layer: 0
   m_Name: Player Ship_0
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -992,7 +992,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -382484923
   m_SortingLayer: 2
-  m_SortingOrder: 20
+  m_SortingOrder: 0
   m_Sprite: {fileID: -6950796986575593632, guid: 1e00a3d1ba210a9409093f6876221cfc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1049,7 +1049,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -1118,6 +1118,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lives: 3
+  livesUI:
+  - {fileID: 658661113}
+  - {fileID: 552149451}
+  - {fileID: 692502152}
 --- !u!1 &898156440
 GameObject:
   m_ObjectHideFlags: 0
@@ -1766,6 +1770,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 114770302}
     m_Modifications:
+    - target: {fileID: 60898485167655179, guid: 161e3d08b2c779949b212fa06a021072, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7798623727528036637, guid: 161e3d08b2c779949b212fa06a021072, type: 3}
       propertyPath: m_Name
       value: Enemy Ship 1_0

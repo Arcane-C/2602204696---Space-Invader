@@ -1,8 +1,12 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerLives : MonoBehaviour
 {
     public int lives = 3;
+    public Image[] livesUI;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -15,6 +19,32 @@ public class PlayerLives : MonoBehaviour
 
     }
 
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+            if (collision.gameObject.tag == "Enemy")
+        {
+            Destroy(collision.gameObject);
+
+            lives -= 1;
+            for (int i = 0; i < livesUI.Length; i++)
+            {
+                if (i < lives)
+                {
+                    livesUI[i].enabled = true;
+                }
+                else
+                {
+                    livesUI[i].enabled = false;
+                }
+            }
+            if (lives <= 0)
+                {
+                    Destroy(gameObject);
+                }
+        }
+    }
+
+    /*
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.gameObject.tag == "Enemy")
@@ -22,10 +52,22 @@ public class PlayerLives : MonoBehaviour
             Destroy(collision.collider.gameObject);
 
             lives -= 1;
-            if (lives <= 0)
+            for (int i = 0; i < livesUI.Length; i++)
             {
-                Destroy(gameObject);
+                if (i < lives)
+                {
+                    livesUI[i].enabled = true;
+                }
+                else
+                {
+                    livesUI[i].enabled = false;
+                }
             }
+            if (lives <= 0)
+                {
+                    Destroy(gameObject);
+                }
         }
     }
+    */
 }
